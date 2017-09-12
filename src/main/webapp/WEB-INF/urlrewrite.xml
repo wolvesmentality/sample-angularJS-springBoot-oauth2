@@ -1,0 +1,9 @@
+<urlrewrite>
+
+	<rule enabled="true">
+	    <condition operator="notequal">^/rest/(.*)$</condition>
+		<from>^/(.*)$</from>
+		<to>/</to>
+	</rule>
+
+</urlrewrite>

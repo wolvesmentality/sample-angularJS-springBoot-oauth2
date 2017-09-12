@@ -1,0 +1,56 @@
+<!-- Navigation -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top: 0;margin-bottom:0 ">
+
+  <div class="row">
+    <div class="navbar-header" style="margin-left: 15px">
+      <a href="/" class="navbar-brand">BOOK RENTAL</a>
+    </div>
+    <div>
+      <ul class="nav navbar-right" style="margin-right: 17px">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle active" data-toggle="dropdown">
+              <i class="fa fa-user fa-fw"></i> 
+              <i class="fa fa-caret-down"></i>  
+          </a>
+          <ul class="dropdown-menu dropdown-user in">
+            <li><a href="/" class="active"><i class="fa fa-user fa-fw"></i> 
+            User Profile
+            </a>
+            </li>
+            <li><a href="/" class="active"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row collapse navbar-collapse" style="margin-left: 5px">
+    <ul class="nav navbar-nav">
+      <li><a href="/" class="fa fa-home" class="fa fa-home">Home</a></li>
+      <li>
+        <a class="fa fa-book" data-toggle="dropdown" role="button"
+         aria-haspopup="false" aria-expanded="false">Books
+          <span class="caret"></span>       
+        </a>
+        <ul  class="dropdown-menu">
+            <li><a href="/books">View Books</a></li>
+            <li><a href="/book">Add New</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="fa fa-wpforms" data-toggle="dropdown" role="button" aria-haspopup="false"
+         aria-expanded="false">Rentals<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/">View Rentals</a></li>
+          <li><a href="/">Add New</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>

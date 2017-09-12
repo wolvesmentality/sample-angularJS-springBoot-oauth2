@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/vendor.min.css" rel="stylesheet"/>
+<script src="js/vendor.min.js"></script>
+<link href="css/bundle.min.css" rel="stylesheet"/>
+<script src="js/bundle.min.js"></script>
+<google-js-api></google-js-api>
+<script>
+  var api = document.querySelector('google-js-api');
+  api.addEventListener('js-api-load', function(e) {
+    console.log('API loaded', gapi);
+  });
+</script>
+<base href="/"> 
+</head>
+<body ng-app="app" ng-controller="IndexController as IndexCtrl">
+
+	<div ng-if="isAuthenticated()">
+		<!-- header -->
+		<div id="top-nav" ng-include="'template/html/header.html'"></div> 
+		<!-- /Header -->
+
+		<!-- Main -->
+		<div id="main" class="container" style="padding-top: 120px;">
+			<div class="row">
+				<div ng-view></div>
+			</div>
+		</div>
+		<!--/main-->
+	</div>
+	<div ng-if="!isAuthenticated()">
+		<div ng-include="'common/login/login.html'"></div>
+	</div>
+	<div id="top-nav" ng-include="'template/html/footer.html'"></div> 
+</body>
+</html>

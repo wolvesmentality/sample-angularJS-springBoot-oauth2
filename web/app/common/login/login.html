@@ -1,0 +1,38 @@
+<div ng-controller="LoginController">
+  <div class="container vcenter" >
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default" style="margin-top: 25%;">
+          <div class="panel-heading">
+              <h3 class="panel-title">Please Sign In</h3>
+          </div>
+          <div class="panel-body">
+            <form role="form">
+              <fieldset>
+                  <div class="form-group">
+                    <input class="form-control" placeholder="username" name="username"
+                      ng-model="credentials.login" autofocus>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" placeholder="Password" name="password" 
+                    type="password" ng-model="credentials.password">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input name="remember" type="checkbox" ng-model="rememberMe">Remember Me
+                    </label>
+                  </div>
+                  <a ng-click="login(credentials)" class="btn btn-lg btn-success btn-block">Login</a>
+                  <p class="fake-legend"><span>Or</span></p>
+                  <a class="btn btn-block btn-social btn-google" ng-click="googleLogin()">
+                    <span class="fa fa-google"></span>
+                    Sign in with Google
+                  </a>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
